@@ -24,28 +24,29 @@ const profileData: ProfileData = {
     email: "info.novo3d@gmail.com",
     linkedin: "linkedin.com/in/sebanovoa",
     linkedinUrl: "https://www.linkedin.com/in/sebanovoa"
+// Este es un comentario de prueba
   },
-  professionalSummary: "Ingeniero en Computación e Informática con un fuerte espíritu emprendedor y una pasión por los desafíos tecnológicos. Cuento con experiencia en la creación y liderazgo de equipos de trabajo enfocados en el logro de objetivos, evaluación de proyectos, análisis de datos y la implementación de soluciones innovadoras bajo el marco de la Industria 4.0. Recientemente, lidero procesos de transformación digital, guiando a grandes organizaciones en la adopción de tecnologías de Google Workspace para optimizar sus operaciones y automatizar procesos clave. Busco activamente generar oportunidades y aplicar mis conocimientos para impulsar el crecimiento y la eficiencia.",
+  professionalSummary: "Ingeniero en Computación e Informática con un fuerte espíritu emprendedor y una pasión por los desafíos tecnológicos. Cuento con experiencia en la creación y liderazgo de equipos de trabajo enfocados en el logro de objetivos, evaluación de proyectos, análisis de datos y la implementación de soluciones innovadoras bajo el marco de la Industria 4.0. Recientemente, he apoyado y prestado soporte en procesos de transformación digital, guiando y acompañando a grandes organizaciones en la adopción de tecnologías de Google Workspace para optimizar sus operaciones y automatizar procesos clave. Busco activamente generar oportunidades y aplicar mis conocimientos para impulsar el crecimiento y la eficiencia.",
   workExperience: [
     {
       role: "Analista Google en COLUN - Externo",
       company: "para Tigabytes, Premier Partner de Google",
       period: "Junio 2024 – Actualidad",
-      description: "Responsable del acompañamiento integral en el proceso de implementación y adopción de las herramientas de Google Workspace para COLUN, facilitando la migración exitosa desde su plataforma heredada (Lotus Notes) y asegurando la continuidad operativa.",
+      description: "Responsable del acompañamiento integral como nexo presencial en el proceso de implementación y adopción de las herramientas de Google Workspace para COLUN, facilitando el soporte personalizado para la migración exitosa desde su plataforma heredada (Lotus Notes) y asegurando la continuidad operativa.",
       highlights: [
-        "Acompañamiento y Gestión del Cambio: Lideré la estrategia de transición, diseñando un plan de gestión del cambio para garantizar una alta tasa de adopción por parte de los usuarios y minimizar la resistencia.",
+        "Acompañamiento y Gestión del Cambio: Apoyo importante en la estrategia de transición, colaborando en el plan de gestión del cambio para garantizar una alta tasa de adopción por parte de los usuarios y minimizar la resistencia.",
         "Soporte y Entrenamiento Experto: Desarrollé y ejecuté programas de capacitación personalizados para los diversos equipos de COLUN, resolviendo incidencias técnicas y potenciando el uso avanzado de las herramientas de Google.",
-        "Innovación y Automatización: Actué como creador de nuevas ideas, proponiendo y desarrollando soluciones para automatizar proyectos y flujos de trabajo mediante el uso de tecnologías como Google Apps Script, Looker Studio y otras herramientas de la nube, mejorando la eficiencia de los procesos internos."
+        "Innovación y Automatización: Actué como creador de nuevas ideas, proponiendo y desarrollando soluciones para automatizar proyectos y flujos de trabajo mediante el uso de tecnologías como Google Apps Script, Looker Studio y otras herramientas de la nube, mejorando la eficiencia de los procesos internos y escuchando a los equipos para dar soluciones desde el dolor de cada área."
       ]
     },
     {
       role: "Coordinador de Informática",
       company: "Ilustre Municipalidad de Osorno, Esc. Efraín Campana Silva",
       period: "2019 – Junio 2024",
-      description: "Dirigí la planificación, desarrollo e implementación de proyectos tecnológicos para fortalecer el proceso educativo.",
+      description: "Apoyo en la planificación, desarrollo e implementación de proyectos tecnológicos para fortalecer el proceso educativo.",
       highlights: [
-        "Implementé nuevos sistemas de información que mejoraron significativamente la comunicación entre docentes y estudiantes.",
-        "Organicé y lideré iniciativas de alto impacto como ferias de ciencia y tecnología, talleres de robótica y programación para alumnos, aplicando metodologías innovadoras como STEM y ABAP."
+        "Uso y manejo de nuevos sistemas de información que mejoraron significativamente la comunicación entre docentes y estudiantes.",
+        "Organizar y apoyar iniciativas de alto impacto como ferias de ciencia y tecnología, talleres de robótica y programación para alumnos, aplicando metodologías innovadoras como STEM y ABAP."
       ]
     },
     {
@@ -94,9 +95,9 @@ const profileData: ProfileData = {
   keySkills: [
     "Liderazgo y Gestión de Equipos: Capacidad para dirigir y motivar equipos multidisciplinarios.",
     "Análisis de Datos y Data Science: Interpretación de datos para la toma de decisiones estratégicas.",
-    "Gestión de Proyectos TI: Evaluación, planificación y ejecución de proyectos tecnológicos complejos.",
+    "Gestión de Proyectos TI: Evaluación, planificación y ejecución de proyectos tecnológicos.",
     "Transformación Digital e Industria 4.0: Implementación de tecnologías para la digitalización y automatización.",
-    "Resolución de Problemas: Identificación y solución de problemas complejos de manera eficiente."
+    "Resolución de Problemas: Identificación y solución de problemas de manera eficiente."
   ],
   technologies: "Google Workspace (Admin, Apps Script, Looker Studio), Redes Informáticas, Videovigilancia con IA, Chilecompra, Metodologías STEM y ABAP."
 };
@@ -135,7 +136,7 @@ const App: React.FC = () => {
 
     if (typeof window.html2canvas === 'undefined' || typeof window.jspdf === 'undefined') {
         console.error("html2canvas or jspdf is not defined. Check CDN links and browser console.");
-        alert("Error: Librerías para PDF no cargadas. Revise la consola del navegador.");
+        alert("Error: Botón no habilitado por este momento.");
         if (loader) loader.style.display = 'none';
         if (downloadButton) (downloadButton as HTMLButtonElement).disabled = false;
         return;
@@ -206,7 +207,7 @@ const App: React.FC = () => {
 
     } catch (error) {
       console.error("Error generating PDF: ", error);
-      alert("Hubo un error al generar el PDF. Por favor, revise la consola para más detalles.");
+      alert("Aplicación no habilitada en este momento");
     } finally {
       if (loader) loader.style.display = 'none';
       if (downloadButton) (downloadButton as HTMLButtonElement).disabled = false;
@@ -280,7 +281,7 @@ const App: React.FC = () => {
         <p className="text-slate-700 leading-relaxed">{profileData.technologies}</p>
       </Section>
       
-      <Section title="Galería de Proyectos (Personalizable)">
+      <Section title="Galería de Proyectos">
         <p className="text-slate-600 mb-4">Aquí se presentan algunas imágenes de la trayectoria profesional.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div>
@@ -307,7 +308,6 @@ const App: React.FC = () => {
               />
               <p className="text-xs text-slate-600 mt-2 text-center">{projectCorfoCaption}</p>
             </div>
-            <ImagePlaceholder altText="Espacio para imagen de proyecto 4" className="w-full h-48 rounded-md" />
         </div>
       </Section>
 
@@ -324,10 +324,10 @@ const App: React.FC = () => {
           <i className="fas fa-spinner fa-spin mr-1"></i>Generando...
         </span>
         <p className="text-xs text-slate-500 mt-2">
-          (Asegúrese de expandir todas las secciones deseadas antes de descargar para la mejor calidad del PDF)
+          (Asegúrese de expandir todas las secciones deseadas antes de descargar para la mejor calidad del PDF, esta opción no se cuenta habilitada por ahora.)
         </p>
         <p className="text-sm text-slate-500 mt-4">
-          Portafolio de {profileData.name} | Generado con React y Tailwind CSS
+          Portafolio de {profileData.name} | Generado con React, Tailwind CSS y Github
         </p>
       </footer>
     </div>
